@@ -200,9 +200,13 @@ else:
 
 
 ## `While` Loop
-Programs often need to run a block of code repeatedly. This is done with a loop. One of the main loop constructs is called a `while` loop, which repeatedly executes a block of code as long as a specified condition is true. 
+Programs often need to run a block of code repeatedly. This is done with a loop. In a flow chart, it looks something like this: 
 
-Here's the basic syntax:
+<img src="images/looping.png" alt="looping" height="280px" />
+
+One of the main loop constructs is called a `while` loop, which repeatedly executes a block of code as long as a specified condition is true. 
+
+Here's the basic syntax of the `while` loop:
 ```python
 while condition:
     # code block to be executed
