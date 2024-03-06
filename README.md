@@ -15,7 +15,7 @@ Note the following about the above variable declaration:
 - Booleans are special values that must begin with a capital letter, e.g. `True` and `False`.
 - Booleans do not use quotes. 
 
-## If / Elif / Else Statements
+## `if` / `elif` / `else` Statements
 Thus far, we have been writing sequential programs. These are programs that run linearly, step-by-step, from start to finish. A sequential program might look something like this:
 
 <img src="images/sequential.png" alt="sequential" height="280px" />
@@ -179,7 +179,6 @@ if has_passport and has_visa:
 
 
     print("You may enter the country.")
-
 elif has_passport and not has_visa:
     print("You need a visa to enter the country.")
 
@@ -188,3 +187,75 @@ elif has_visa and not has_passport:
 else:
     print("You need a passport and visa to enter the country.")
 ```
+
+## `While` Loop
+Programs often need to run a block of code repeatedly. This is done with a loop. One of the main loop constructs is called a `while` loop, which repeatedly executes a block of code as long as a specified condition is true. 
+
+Here's the basic syntax:
+```python
+while condition:
+    # code block to be executed
+```
+
+The condition is a boolean expression (see Comparison Operators section, above) that determines whether the loop should continue or stop. The code block under the while statement is executed repeatedly until the condition becomes `False`.
+
+### Example
+This code:
+
+```python
+num = 1
+while num <= 5:
+    print(num)
+    num += 1
+```
+
+would result in the output:
+
+```
+1
+2
+3
+4
+5
+```
+The loop prints numbers from 1 to 5 because the condition `num <= 5` is true for those values of num.
+
+
+## `For` Loop
+A `for` loop in Python **iterates** over a sequence and executes a block of code for each item in the sequence. Here's the basic syntax:
+```python
+for item in sequence:
+    # code block to be executed
+```
+
+`item` is a variable that represents the current item in the sequence being processed. `sequence` is any iterable object that contains multiple items. For our examples we used the `range()` function to give us a sequence o numbers.
+
+## Using the `range()` Function
+The `range()` function in Python generates a sequence of numbers based on the parameters provided. It's commonly used with for loops to execute a block of code a specific number of times.
+
+Here's how the `range()` function works:
+
+```python
+range(start, stop, step)
+```
+
+* `start` (optional): The starting value of the sequence. If not provided, it defaults to 0.
+* `stop`: The end value of the sequence. The sequence will stop before reaching this value.
+* `step` (optional): The step size between each number in the sequence. If not provided, it defaults to 1.
+
+### Generation of Sequence
+When you call `range(start, stop, step)`, it generates a sequence of integers starting from `start` (inclusive) up to, but not including, `stop`. The numbers in the sequence are incremented by step.
+
+#### Examples
+* If you call `range(5)`, it generates a sequence from `0` to `4`.
+* If you call `range(1, 6)`, it generates a sequence from `1` to `5`.
+* If you call `range(1, 10, 2)`, it generates a sequence of odd numbers from `1` to `9`, i.e. `1`, `3`, `5`, `7`, `9`.
+
+### Usage with `for` Loops
+The `range()` function is commonly used with `for` loops to iterate a specific number of times. For example:
+```python
+for i in range(5):
+    print(i)
+```
+
+This will print numbers from `0` to `4`, as the `range(5)` generates a sequence starting from `0` and ending before `5`.
