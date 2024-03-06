@@ -143,9 +143,10 @@ The above code will evaluate the `customer_age` first with the logical `or` oper
 
 ## Style with Conditionals
 There are a few notes for good programming style when using conditionals:
-### Whitespace
+
 - Leave whitespace around conditional operators, as you would arithmetic operators.
 - Use logical paragraphs and keep code blocks together their respective conditions.
+- Use parentheses to clarify and group conditionals when using logical operators.
 
 ### Example: Whitespace around operators
 #### Good
@@ -187,6 +188,16 @@ elif has_visa and not has_passport:
 else:
     print("You need a passport and visa to enter the country.")
 ```
+
+### Example: Use parentheses for grouping and clarification
+#### Good
+```python
+if (user_age < 12 or user_age >= 65) and (has_id == "y" or has_id == "Y"):
+    print("Yes! You are eligible for a discount!")
+else:  
+    print("Sorry, no discount.")
+```
+
 
 ## `While` Loop
 Programs often need to run a block of code repeatedly. This is done with a loop. One of the main loop constructs is called a `while` loop, which repeatedly executes a block of code as long as a specified condition is true. 
