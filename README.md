@@ -353,11 +353,11 @@ The tracing table would look like:
 user_number | counter | counter <= user_number | output
 --|--|--|--
 5 | 0 | True |0
-&nbsp; | 1 | True | 1
-&nbsp; | 2 | True | 2
-&nbsp; | 3 | True | 3
-&nbsp; | 4 | True | 4
-&nbsp; | 5 | True | 5
+&nbsp; | 1 | True | `1`
+&nbsp; | 2 | True | `2`
+&nbsp; | 3 | True | `3`
+&nbsp; | 4 | True | `4`
+&nbsp; | 5 | True | `5`
 &nbsp; | 6 | False | &nbsp;
 
 <br>
